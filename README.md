@@ -84,3 +84,4 @@ the travis.js file must be located in the project.root dir, it should contain ha
 - 0.1.1: added the get() method
 - 0.1.2: added the getMaxPayloadLength() method
 - 0.1.3: added support for the travis.js file
+- 0.1.4: added check for correct result wehn downloadin certificate
