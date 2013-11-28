@@ -29,7 +29,7 @@ The library fetches the repository public key from travis when not set using the
 		publicKey: '-----BEGIN PUBLIC KEY--...'
 	});
 
-### travis.encrypt()
+### travis.encrypt(data, cb)
 
 encrypts data with the given public key, the public key will be downloaded from the travis repository if required
 
@@ -39,7 +39,7 @@ encrypts data with the given public key, the public key will be downloaded from 
 	};
 
 
-### travis.getPublicKey()
+### travis.getPublicKey(cb)
 
 returns the public key, the public key will be downloaded from the travis repository if required
 
@@ -48,3 +48,15 @@ returns the public key, the public key will be downloaded from the travis reposi
 		else log('Public Key: '+secureData);
 	};
 
+
+### travis.get(key, defaultValue)
+
+returns either the key from the process env or the default value
+
+	var mySecurePassword = travis.get('DB_PASS', config.password);
+
+
+## CHANGELOG
+
+- 0.1.0: inital release
+- 0.1.1: added the get() method
