@@ -49,12 +49,6 @@ returns the public key, the public key will be downloaded from the travis reposi
 	};
 
 
-### travis.get(key, defaultValue)
-
-returns either the key from the process env or the default value
-
-	var mySecurePassword = travis.get('DB_PASS', config.password);
-
 
 ### travis.getMaxPayloadLength(cb)
 
@@ -67,9 +61,26 @@ returns the maximal length of the payload for the current publickey
 
 
 
+### travis.get(key, defaultValue)
+
+returns either the key from the travis.js file, the process env or the default value
+
+	var mySecurePassword = travis.get('DB_PASS', config.password);
+
+the travis.js file must be located in the project.root dir, it should contain hashes
+
+	module.exports = {
+		  DB_HOST: 'mysecureHost.tld'
+		, DB_PASS: 'bestPasswordEver'
+		, DB_PORT: 1337
+	};
+
+
+
 
 ## CHANGELOG
 
 - 0.1.0: inital release
 - 0.1.1: added the get() method
 - 0.1.2: added the getMaxPayloadLength() method
+- 0.1.3: added support for the travis.js file
