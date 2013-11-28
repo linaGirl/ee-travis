@@ -41,5 +41,20 @@
 		it('Should be able to encrypt data without getting the key from the repository', function(done){
 			travis.encrypt('DB_PASS=mySecuureData', done);
 		});
+
+		it('Should be able to return the max payload length', function(done){
+			travis.getMaxPayloadLength(done);
+		});
+
+		it('Should be able to encrypt data with a length of 118 bytes', function(done){
+			travis.encrypt(new Array(118).join('.'), done);
+		});
+
+		it('Should not be able to encrypt data with a length of 119 bytes', function(done){
+			travis.encrypt(new Array(119).join('.'), function(err){
+				assert.ok(err);
+				done();
+			});
+		});
 	});
 	

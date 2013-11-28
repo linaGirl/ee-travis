@@ -56,7 +56,20 @@ returns either the key from the process env or the default value
 	var mySecurePassword = travis.get('DB_PASS', config.password);
 
 
+### travis.getMaxPayloadLength(cb)
+
+returns the maximal length of the payload for the current publickey
+
+	travis.getMaxPayloadLength(function(err, maxLength){
+		if (err) log.error('failed to get max public key payload length:'+err);
+		else log('max payload length: '+maxLength);
+	});
+
+
+
+
 ## CHANGELOG
 
 - 0.1.0: inital release
 - 0.1.1: added the get() method
+- 0.1.2: added the getMaxPayloadLength() method
