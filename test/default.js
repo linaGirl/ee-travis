@@ -57,4 +57,18 @@
 			});
 		});
 	});
+
+	if (process.env.EE_GH_REPO) {
+		describe('Travis', function(){
+			var travis = new Travis({
+				  repository: process.env.EE_GH_REPO
+				, password: process.env.EE_GH_PASS
+				, username: process.env.EE_GH_USER
+			});
+
+			it('Should be able get the publickey from github', function(done){
+				travis.getPublicKey(done);
+			});
+		});
+	}
 	

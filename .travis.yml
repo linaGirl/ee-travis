@@ -2,3 +2,9 @@ language: node_js
 
 node_js : 
     - "0.10"
+
+env :
+    global :
+        - secure : ubqdyOhyWc5TXe3ZibNO4h8XYlRUlfTcFO7NCPDrFGWohVu+bkCMQX9nQPiUBeTABhpu3+Auisw8Uq7V88jn3gF3NiUuSSyaazSszCVUcMhRiXu9Bp3sncQ8BP5mnLppt0y9CknW4NPdxoiWDqVnmi8GjtLS2uLEgXOnXzL4He4=
+        - secure : wUgop9B9O2R3bMKPBFWdrUf+CuqUDaVc8EGVLb2lJk51ChfxczjnJLjpjC6xbSGWaTp+rc2fgYqKP5+wA92P0lCh5cOlhcyqM4p6CAexVzeH92r0L8Y9dKycfaOH4w9rw79ERNW/MEQgbs3RAq0ELQgyHSvtG2l+kemAcxGWdOk=
+        - secure : FEOQ7qxfO7PCflKQUgrkLpVISuHIqQYNy7CxHKH7C0KAJYi7a/MvBzxag8TOEO3/VNPxxtaHypjTCiLa6r4aO+TFY6M5Tw4NascbDmVhu4UEExcLM5KhsK5Ts1i3h/7N95WyIpEgjD1o6vLUyrjHMwGqqskYeEuV2c2ccmBLXYo=

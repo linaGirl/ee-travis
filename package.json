@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-travis"
     , "description"                 : "Encode private env varibles for travis using a travis public key"
-    , "version"                     : "0.1.4"
+    , "version"                     : "0.1.5"
     , "homepage"                    : "https://github.com/eventEmitter/ee-travis"
     , "author"                      : "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
     , "licence"                     : "mit"
@@ -24,12 +24,13 @@
         , "ee-error"                : "*"
         , "ee-project"              : "*"
         , "ursa"                    : "0.8.0"
+        , "github"                  : "0.1.12"
     }
     , "devDependencies": {
           "mocha"                   : "*"
     }
     , "optionalDependencies": {}
-    , "keywords"                    : ["travis", "encrypt", "env"]
+    , "keywords"                    : ["travis", "travis-ci", "travis pro", "encrypt"]
     , "scripts": {
         "test"                      : "./node_modules/mocha/bin/mocha --reporter spec"
     }

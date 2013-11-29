@@ -13,9 +13,11 @@ Encode private env varibles for travis using a travis public key
 
 ## API
 
-The library fetches the repository public key from travis when not set using the construcotr or the setPublicKey() method.
+The library fetches the repository public key from travis or github when not set using the construcotr or the setPublicKey() method.
 
 ### Contructor
+
+you have to pass either a publickey or a repo name. if you are using travis pro you should pass your github user & password.
 	
 	var Travis = require('ee-travis');
 
@@ -27,6 +29,13 @@ The library fetches the repository public key from travis when not set using the
 	// add public key via constructor
 	var travis = new Travis({ 
 		publicKey: '-----BEGIN PUBLIC KEY--...'
+	});
+
+	// travis pro, get public key from repo
+	var travis = new Travis({ 
+		  repository: 'eventEmitter/ee-travis'
+		, username: 'eventEmitter'
+		, password: 'yes, this is my real password'
 	});
 
 ### travis.encrypt(data, cb)
@@ -85,3 +94,4 @@ the travis.js file must be located in the project.root dir, it should contain ha
 - 0.1.2: added the getMaxPayloadLength() method
 - 0.1.3: added support for the travis.js file
 - 0.1.4: added check for correct result wehn downloadin certificate
+- 0.1.5: added support for travis pro
