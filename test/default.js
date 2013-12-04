@@ -7,8 +7,7 @@
 
 
 
-	var Travis = require('../')
-
+	var Travis = require('../');
 
 
 
@@ -58,17 +57,16 @@
 		});
 	});
 
-	if (process.env.EE_GH_REPO) {
+	if (process.env.GH_REPO) {
 		describe('Travis', function(){
 			var travis = new Travis({
-				  repository: process.env.EE_GH_REPO
-				, password: process.env.EE_GH_PASS
-				, username: process.env.EE_GH_USER
+				  repository: 	process.env.GH_REPO
+				, password: 	process.env.GH_PASS
+				, username: 	process.env.GH_USER
 			});
 
 			it('Should be able get the publickey from github', function(done){
-				travis.getPublicKey(done);
+				travis.getPublicKeyObject(done);
 			});
 		});
 	}
-	
