@@ -1,7 +1,7 @@
 {
       "name"                        : "ee-travis"
     , "description"                 : "Encode private env varibles for travis using a travis public key"
-    , "version"                     : "0.1.8"
+    , "version"                     : "0.1.9"
     , "homepage"                    : "https://github.com/eventEmitter/ee-travis"
     , "author"                      : "Michael van der Weg <michael@eventemitter.com> (http://eventemitter.com/)" 
     , "licence"                     : "mit"
@@ -23,7 +23,7 @@
         , "request"                 : "2.27.0"
         , "ee-error"                : "*"
         , "ee-project"              : "*"
-        , "ursa"                    : "0.8.0"
+        , "node-forge"              : "0.2.21"
         , "github"                  : "0.1.12"
     }
     , "devDependencies": {

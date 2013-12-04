@@ -99,3 +99,4 @@ the travis.js file must be located in the project.root dir, it should contain ha
 - 0.1.6: bugfix release
 - 0.1.7: bugfix release
 - 0.1.8: Added class method «get»
+- 0.1.9: removed the «ursa» depency which doesn't work with newer node versions, using the js implementaiotn «node-forge» instead
