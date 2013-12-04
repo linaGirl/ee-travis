@@ -57,6 +57,15 @@
 		});
 	});
 
+
+	describe('Travis', function(){
+		
+		it('Should be able to retreive a encrypted value', function(){
+			assert(Travis.get('DB_HOST'));
+		});
+	});
+
+
 	if (process.env.GH_REPO) {
 		describe('Travis', function(){
 			var travis = new Travis({

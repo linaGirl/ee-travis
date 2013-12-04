@@ -72,9 +72,10 @@ returns the maximal length of the payload for the current publickey
 
 ### travis.get(key, defaultValue)
 
-returns either the key from the travis.js file, the process env or the default value
+returns either the key from the travis.js file, the process env or the default value. This method may also invoked on the Class itself instead on an instance of it.
 
 	var mySecurePassword = travis.get('DB_PASS', config.password);
+	var mySecurePassword = Travis.get('DB_PASS', config.password);
 
 the travis.js file must be located in the project.root dir, it should contain hashes
 
@@ -95,3 +96,6 @@ the travis.js file must be located in the project.root dir, it should contain ha
 - 0.1.3: added support for the travis.js file
 - 0.1.4: added check for correct result wehn downloadin certificate
 - 0.1.5: added support for travis pro
+- 0.1.6: bugfix release
+- 0.1.7: bugfix release
+- 0.1.8: Added class method «get»
