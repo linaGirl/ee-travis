@@ -1,5 +1,7 @@
 # ee-travis
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/eventEmitter/ee-travis.svg)](https://greenkeeper.io/)
+
 Encode private env varibles for travis using a travis public key
 
 ## installation
